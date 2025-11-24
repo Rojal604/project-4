@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
+import { getAssetPath } from "@/lib/utils"
+
 
 export default function About() {
   const ref = useRef(null)
@@ -28,7 +30,7 @@ export default function About() {
             <div className="aspect-square bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl p-1">
               <div className="w-full h-full bg-gray-200 rounded-xl flex items-center justify-center">
                 <img
-                  src="/cooperative-team-together.jpg"
+                  src={getAssetPath("/cooperative-team-together.jpg")}
                   alt="Cooperative team working together"
                   className="w-full h-full object-cover rounded-xl"
                 />
